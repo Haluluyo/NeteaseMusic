@@ -6,11 +6,12 @@
 
 <script>
   var xhr=new XMLHttpRequest
-  xhr.open('GET','/category.json',true)
+  xhr.open('GET','/NeteaseMusic/category.json',true)
   xhr.send()
   xhr.onload=function(){
     if(xhr.status>=200||xhr.status===304){
-      //成功了！   
+      //成功了！  
+      console.log(JSON.parse(xhr.responseText))
     }
   }
 </script>
